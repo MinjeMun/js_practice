@@ -13,29 +13,27 @@
 class Calculator{
     history = [];
     constructor(num) {
-        this.num = num;   
-        this.history.push(num);
+        this.resultNumber = num;   
+    }
+    get resultNumber() {
+        return this._resultNumber;
+    }
+    set resultNumber(num) {
+        this._resultNumber = num;
+        this.history = [...this.history, num];
     }
     
-    add(calculateNumber) {
-        console.log(typeof calculateNumber);
-        let _temp = this.history.slice(-1)[0] += calculateNumber;
-        this.history.push(_temp);
+    add(calculateNum) {
+        this.resultNumber += calculateNum;
     }
     sub(calculateNumber) {
-        console.log(typeof calculateNumber);
-        let _temp = this.history.slice(-1)[0] -= calculateNumber;
-        this.history.push(_temp);
+        this.resultNumber += calculateNum;
     }
     mul(calculateNumber) {
-        console.log(typeof calculateNumber);
-        let _temp = this.history.slice(-1)[0] *= calculateNumber;
-        this.history.push(_temp);
+        this.resultNumber += calculateNum;    
     }
     div(calculateNumber) {
-        console.log(typeof calculateNumber);
-        let _temp = this.history.slice(-1)[0] /= calculateNumber;
-        this.history.push(_temp);
+        this.resultNumber += calculateNum;    
     }
     show() {
         console.log(this.history);
