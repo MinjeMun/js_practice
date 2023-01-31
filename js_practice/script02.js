@@ -128,14 +128,15 @@
 
 // let result = scoreArr.reduce((sum, current) => sum + current.english, 0);
 // console.log(result);
+
 // // => 안 쓰는 방법
 // let result = scoreArr.reduce(function(prevReturn, currentElement) {
 //     return prevReturn + currentElement.english
 // }, 0) // 0은 초기값 지정하는 역할
-// // prevReturn -> 0, currentElement -> {math: 50, english: 70}
-// // prevReturn -> 70, currentElement -> {math: 70, english: 60}
-// // prevReturn -> 70+60, currentElement -> {math: 80, english: 50}
-// // prevReturn -> 70+60++50
+// prevReturn -> 0, currentElement -> {math: 50, english: 70}
+// prevReturn -> 70, currentElement -> {math: 70, english: 60}
+// prevReturn -> 70+60, currentElement -> {math: 80, english: 50}
+// prevReturn -> 70+60++50
 
 // 배열 연습문제 2
 // 아래 배열에서, 수학 점수가 60점 이상인 사람들만 남기는 코드를 작성하세요. (filter 활용)
@@ -150,17 +151,17 @@
 
 // 배열 연습문제 3
 // 아래 배열에서, 학생 별로 sum: (점수 총합) 을 추가하는 코드를 작성하세요. (map 활용)
-let students = [
-    {id: 1, name: 'Kim', score: {math: 50, english: 70}},
-    {id: 2, name: 'Park', score: {math: 80, english: 60}},
-    {id: 3, name: 'Lee', score: {math: 70, english: 50}},
-]
+// let students = [
+//     {id: 1, name: 'Kim', score: {math: 50, english: 70}},
+//     {id: 2, name: 'Park', score: {math: 80, english: 60}},
+//     {id: 3, name: 'Lee', score: {math: 70, english: 50}},
+// ]
 
-let result = students.map(element => ({
-    id: element.id, 
-    name: element.name,
-    score: element.score,
-    sum: (element.score.math + element.score.english)
-}));
+// let result = students.map(element => ({
+//     id: element.id, 
+//     name: element.name,
+//     score: element.score,
+//     sum: (element.score.math + element.score.english)
+// }));
 
-console.log(result);
+// console.log(result);
