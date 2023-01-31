@@ -42,6 +42,3 @@ class Calculator{
         this.history.pop();
     }
 }
-
-
-let test = new Calculator(2);
