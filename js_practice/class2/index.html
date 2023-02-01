@@ -36,13 +36,12 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        
-        <div class="number">
-        <button id="london" onclick="london()">런던</button>
-        <button id="newyork" onclick="newyork()">뉴욕</button>
-        <button id="seoul" onclick="seoul()">서울</button>
+        <div onclick="setTime(event)">
+            <button id="london">런던</button>
+            <button id="newyork">뉴욕</button>
+            <button id="seoul">서울</button>
         </div>
-        <div id="result"></div>
+        <h2 id="result"></h2>
     </body>
     <script src="script04.js"></script>
 </html>
